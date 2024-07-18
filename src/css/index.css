@@ -74,15 +74,39 @@ body {
     background-color: var(--color-yellor);
 }
 
+.container-languages{
+    margin-bottom: 1rem;
+}
+
+.container-languages h4{
+    margin-bottom: .5rem;
+    color: var(--color-font-titulo-black);
+}
+
+.linguages{
+    display: flex;
+    justify-content: space-between;
+}
+
+.linguages h5, p{
+    font-weight: normal;
+    font-size: .9rem;
+    color: var(--color-font-descricao-black);
+}
+
+
 .progress {
-    width: 100px;
+    padding: 2px 3px 4px;
+    width: 100%;
     height: 5px;
     border-radius: 5px;
     color: white;
+    border: 1px solid var(--color-yellor);
+    margin-bottom: .5rem;
 }
 
 .progress div {
-    height: 100%;
+    height: 2px;
     border-radius: 10px;
     background-color: var(--color-yellor);
 }
