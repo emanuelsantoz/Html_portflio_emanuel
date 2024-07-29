@@ -30,7 +30,7 @@ p {
 
 body {
     display: grid;
-    grid-template-columns: 13% 80% 5%;
+    grid-template-columns: 15% 80% 5%;
 }
 
 .container-perfil {
@@ -49,6 +49,7 @@ body {
     border-radius: 50%;
     background-color: rgb(226, 226, 226);
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
 .detalhes-foto h5 {
@@ -58,7 +59,11 @@ body {
     margin-bottom: 1rem;
 }
 
-.detalhes-perfil{
+.detalhes-foto>p {
+    text-align: center;
+}
+
+.detalhes-perfil {
     margin-bottom: 1rem;
 }
 
@@ -74,26 +79,26 @@ body {
     background-color: var(--color-yellor);
 }
 
-.container-languages{
+.container-languages {
     margin-bottom: 1rem;
 }
 
-.container-languages h4{
+.container-languages h4 {
     margin-bottom: .5rem;
     color: var(--color-font-titulo-black);
 }
 
-.linguages{
+.linguages {
     display: flex;
     justify-content: space-between;
 }
 
-.linguages h5, p{
+.linguages h5,
+p {
     font-weight: normal;
     font-size: .9rem;
     color: var(--color-font-descricao-black);
 }
-
 
 .progress {
     padding: 2px 3px 4px;
@@ -118,12 +123,13 @@ body {
 
 .redes ul i {
     padding: .2rem;
-    background-color: var(--color-yellor);
+    background-color: var   (--color-yellor);
     border-radius: 50%;
 }
 
 
 main {
+    min-width: 320px;
     padding: 2rem;
     background-color: #F0F0F6;
 }
@@ -136,14 +142,13 @@ main {
 }
 
 .container-sobre-min>section {
-    margin: auto 5rem auto 0;
-    padding: 5rem 0 0 5rem
+    margin: auto 0rem auto 0;
+    padding: 5rem 0 2rem 5rem
 }
 
 .container-sobre-min>section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-
 }
 
 .job {
@@ -221,6 +226,7 @@ hr {
     width: 100%;
     height: 100%;
     background-size: cover;
+    object-fit: cover;
 }
 
 .container-menu {
@@ -229,8 +235,44 @@ hr {
 
 .container-menu li {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    list-style: none;
-    margin: auto;
+}
+
+.container-menu>li ul {
+    margin: 2rem auto;
+    padding: .6rem .5rem;
+    border-radius: 100%;
+    background-color: #FFB400;
+}
+
+@media (max-width: 1250px) {
+    body {
+        grid-template-columns: 95% 5%;
+    }
+
+    .container-perfil {
+        display: none;
+    }
+
+    .perfil-grande {
+        width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 983px) {
+    body {
+        display: block;
+    }
+
+    .container-sobre-min {
+        display: flex;
+        flex-direction: column-reverse;      
+        align-items: center;
+    }
+
+    main{
+        margin: 0px;
+        padding: 0;
+    }
 }
